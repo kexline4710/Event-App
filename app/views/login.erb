@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="enterinfo">
+    <form action="/login" method="post">
+        <h2> Login </h2>
+        <label for="email">Email:</label>
+        <input type="text" name="email" value=""><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" ><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <% if session[:errors] %>
+      <span style="color: red;"><%= session[:errors] %></span>
+    <% end %>
+
+  <form action="/users" method="post">
+    <h2> Create a new account</h2>
+      <label for="first_name">First Name:</label>
+      <input type="text"  name="new[first_name]"><br>
+      <label for="last_name">Last Name:</label>
+      <input type="text"  name="new[last_name]"><br>
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" name="new[birthdate]" value=" "><br>
+      <label for="email">Email:</label>
+      <input type="text" name="new[email]" value=" "><br>
+      <label for="password">Password:</label>
+      <input type="password" name="new[password_digest]" ><br>
+      <input type="submit" value="Submit">
+  </form>
+  </div>
+</div>
+

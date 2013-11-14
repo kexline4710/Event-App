@@ -1,0 +1,31 @@
+<div class="container">
+  <h1><%= @event.name %></h1>
+
+  <h2>Location: <%= @event.location %></h2>
+  <p>Created by: <%= @creator.first_name %></p>
+  <p>Starts at: <%= @event.starts_at %></p>
+  <p>Ends at: <%= @event.ends_at %></p>
+  <ul>Attendees: 
+    <% @attendances.each do |attendance| %>
+      <li><%= attendance.user.first_name %></li>
+    <% end %>
+  </ul>
+
+
+  <form action="/events/<%= @event.id %>/eventattendances" method="POST">
+      <input type="submit" value="Attend Event">
+  </form>
+
+  <% if user_logged_in?%>
+  <% if @creator.id == current_user.id %>
+    <form action="/events/<%= @event.id %>/edit">
+      <input type="submit" value="Edit Event">
+    </form>
+    <form action="/events/<%= @event.id %>/delete" method="POST">
+      <input type="submit" value="Delete Event">
+    </form>
+
+  <% end %>
+  <% end %>
+
+</div>

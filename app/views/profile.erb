@@ -1,0 +1,23 @@
+ <div class="container">
+ <% if session[:user_id] %>
+
+  <h1>Hi, <%= @user.first_name %>!</h1>
+  
+  <div id="events_created">
+  <h2>Events You Created:</h2>
+    <% @created.each do |event| %>
+      <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
+    <% end %>   
+  </div>
+
+  <h2>Events You Attended: </h2>
+    <% @attended.each do |event| %>
+      <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
+    <% end %>
+
+  <form id="profile_event" action="/events" method="post">
+    <h2> Create a new event</h2>
+      <%= erb :_event_form %>
+  </form>
+  <% end %>
+</div>

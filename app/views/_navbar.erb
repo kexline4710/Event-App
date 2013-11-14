@@ -1,0 +1,16 @@
+  <form action="/" method="GET">
+    <input type="submit" value="Home">
+  </form>
+
+  <% if user_logged_in? %>
+  <form action="/logout" method="POST">
+    <input type="submit" value="Logout">
+  </form>
+  <form action="/profile" method="GET">
+    <input type="submit" value="Profile">
+  <% else %>
+  <form action="/login" method="GET">
+    <input type="submit" value="Login">
+  </form>
+  <% end %>
+  </form>
