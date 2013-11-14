@@ -5,7 +5,7 @@ end
 post '/login' do
   user = User.find_by_email(params[:email])
   if user
-    if user.authenticate(params[:password])
+    if user.password_digest == params[:password]
       session[:user_id] = user.id
       redirect to '/'
     else

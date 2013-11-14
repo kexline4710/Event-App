@@ -7,7 +7,7 @@ helpers do
     session[:user_id]
   end
 
-  def authenticate(password)
-    self.password_digest == password
-  endß
+  # def authenticate(password)
+  #   self.password_digest == password
+  # endß
 end
