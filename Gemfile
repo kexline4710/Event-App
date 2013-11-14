@@ -21,3 +21,5 @@ group :test do
   gem 'rspec'
   gem 'shoulda-matchers'
 end
+
+gem 'bcrypt-ruby'

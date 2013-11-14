@@ -3,17 +3,12 @@ get '/login' do
 end
 
 post '/login' do
-  user = User.find_by_email(params[:email])
+  user = User.authenticate(params[:email], params[:password])
   if user
-    if user.password_digest == params[:password]
-      session[:user_id] = user.id
-      redirect to '/'
-    else
-      session[:errors] = "Password incorrect!"
-      redirect to '/login'
-    end
+    session[:user_id] = user.id
+    redirect to '/profile'
   else
-    session[:errors] = "Cannot find record of email!"
+    session[:errors] = "Incorrect login credentials"
     redirect to '/login'
   end
 end
@@ -38,6 +33,8 @@ get '/profile' do
     @user = User.find(session[:user_id])
     @created = @user.created_events
     @attended = @user.attended_events
+    hash = Digest::MD5.hexdigest(@user.email.downcase)
+    @image = "http://www.gravatar.com/avatar/#{hash}"
   end
   erb :profile
 end

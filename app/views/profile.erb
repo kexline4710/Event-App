@@ -2,6 +2,7 @@
  <% if session[:user_id] %>
 
   <h1>Hi, <%= @user.first_name %>!</h1>
+  <img src="<%= @image %>"/>
   
   <div id="events_created">
   <h2>Events You Created:</h2>

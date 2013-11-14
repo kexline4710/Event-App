@@ -2,11 +2,19 @@
   <div class="enterinfo">
     <form action="/login" method="post">
         <h2> Login </h2>
-        <label for="email">Email:</label>
-        <input type="text" name="email" value=""><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" ><br>
-        <input type="submit" value="Submit">
+      <table>
+        <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="text" name="email" value=""><br></td>
+        </tr>
+        <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" name="password" ><br></td>
+        </tr>
+        <tr>
+        <td></td><td><input type="submit" value="Submit"></td>
+      </tr>
+      </table>
     </form>
 
     <% if session[:errors] %>
@@ -15,17 +23,31 @@
 
   <form action="/users" method="post">
     <h2> Create a new account</h2>
-      <label for="first_name">First Name:</label>
-      <input type="text"  name="new[first_name]"><br>
-      <label for="last_name">Last Name:</label>
-      <input type="text"  name="new[last_name]"><br>
-      <label for="birthdate">Birthdate:</label>
-      <input type="date" name="new[birthdate]" value=" "><br>
-      <label for="email">Email:</label>
-      <input type="text" name="new[email]" value=" "><br>
-      <label for="password">Password:</label>
-      <input type="password" name="new[password_digest]" ><br>
-      <input type="submit" value="Submit">
+    <table>
+    <tr>
+      <td><label for="first_name">First Name:</label></td>
+      <td><input type="text"  name="new[first_name]"></td>
+    </tr>
+    <tr>  
+      <td><label for="last_name">Last Name:</label></td>
+      <td><input type="text"  name="new[last_name]"></td>
+    </tr>
+    <tr>  
+      <td><label for="birthdate">Birthdate:</label></td>
+      <td><input type="date" name="new[birthdate]" value=" "></td>
+    </tr>
+    <tr>  
+      <td><label for="email">Email:</label></td>
+      <td><input type="text" name="new[email]" value=" "></td>
+    </tr>
+    <tr>  
+      <td><label for="password">Password:</label></td>
+      <td><input type="password" name="new[password]" ></td>
+    </tr>
+    <tr>  
+      <td></td><td><input type="submit" value="Submit"></td>
+    </tr>
+    </table>  
   </form>
   </div>
 </div>
