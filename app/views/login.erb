@@ -1,6 +1,6 @@
-<div class="container">
+<!-- <div class="container"> -->
   <div class="enterinfo">
-    <form action="/login" method="post">
+    <form class='pure-form' action="/login" method="post">
         <h2> Login </h2>
       <table>
         <tr>
@@ -12,7 +12,7 @@
         <td><input type="password" name="password" ><br></td>
         </tr>
         <tr>
-        <td></td><td><input type="submit" value="Submit"></td>
+        <td></td><td><button class='pure-button' type="submit">Login</button></td>
       </tr>
       </table>
     </form>
@@ -21,7 +21,7 @@
       <span style="color: red;"><%= session[:errors] %></span>
     <% end %>
 
-  <form action="/users" method="post">
+  <form class='pure-form' action="/users" method="post">
     <h2> Create a new account</h2>
     <table>
     <tr>
@@ -45,10 +45,10 @@
       <td><input type="password" name="new[password]" ></td>
     </tr>
     <tr>  
-      <td></td><td><input type="submit" value="Submit"></td>
+      <td></td><td><button class='pure-button' type="submit">Sign Up</button></td>
     </tr>
     </table>  
   </form>
   </div>
-</div>
+<!-- </div> -->
 

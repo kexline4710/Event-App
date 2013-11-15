@@ -1,4 +1,4 @@
- <div class="container">
+
  <% if session[:user_id] %>
 
   <h1>Hi, <%= @user.first_name %>!</h1>
@@ -16,9 +16,9 @@
       <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
     <% end %>
 
-  <form id="profile_event" action="/events" method="post">
+  <form class="pure-form" id="profile_event" action="/events" method="post">
     <h2> Create a new event</h2>
       <%= erb :_event_form %>
   </form>
   <% end %>
-</div>
+

@@ -1,11 +1,19 @@
-<div class="container">
-  <h1>Welcome to Events Manager!</h1>
+<!-- <div class="container"> -->
+  <div class="content">
+    <br><a href="/events/new/"><button class="pure-button" id="create_button">Create New Event!</button></a>
+    <h2>All Events</h2>
+      <% @events.each do |event| %>
+        <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
+      <% end %>  
+  </div>
 
-  <h2>Events</h2>
-  <% @events.each do |event| %>
-    <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
-  <% end %>
+  <div class="sidebar">
+    <% if session[:user_id] %>
+   <!--  <h1>Hi, <%= @user.first_name %>!</h1>
+    <img src="<%= @image %>"/> -->
+    <%= erb :profile, :layout => false %>
+    <% end %>
+  </div>
 
-  <br><a href="/events/new/">Create New Event!</a>
-
-</div>
+  
+<!-- </div> -->

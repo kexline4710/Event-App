@@ -6,8 +6,8 @@
   <p>Ends at: <%= @event.ends_at %></p>
   <ul>Attendees: </ul>
   
-  <form action="/events/<%= @event.id %>" method="post">
-    <h2>Edit this event</h2>
+  <h2>Edit this event</h2>
+  <form class='pure-form' action="/events/<%= @event.id %>" method="post">  
       <%= erb :_event_form %>
   </form>
 </div>
