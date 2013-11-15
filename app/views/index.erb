@@ -1,17 +1,20 @@
 <!-- <div class="container"> -->
   <div class="content">
     <br><a href="/events/new/"><button class="pure-button" id="create_button">Create New Event!</button></a>
+
+    <div id="event-list">
     <h2>All Events</h2>
       <% @events.each do |event| %>
-        <p><a href="/events/<%= event.id %>"><%= event.name %></a></p>
-      <% end %>  
+        <p class="event"><a href="/events/<%= event.id %>"><%= event.name %></a></p>
+      <% end %>
+    </div>  
   </div>
 
   <div class="sidebar">
     <% if session[:user_id] %>
-   <!--  <h1>Hi, <%= @user.first_name %>!</h1>
-    <img src="<%= @image %>"/> -->
-    <%= erb :profile, :layout => false %>
+      <%= erb :profile, :layout => false %>
+    <% else %>
+      <p id="quote"><em><strong>"For every wound, a balm.<br>&nbsp;&nbsp;For every sorrow, cheer.<br>For every storm, a calm.<br>&nbsp;&nbsp;For every thirst, a beer."</em></strong></p>
     <% end %>
   </div>
 

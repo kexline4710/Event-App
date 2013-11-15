@@ -161,6 +161,8 @@ Forms Core
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
+    margin-bottom: 10px;
+    margin-left: 3px;
 }
 
 /*
@@ -354,6 +356,8 @@ Forms Core
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 10px;
+    margin-left: 3px;
 }
 
 .pure-skin-mine .pure-form input[type="text"]:focus,
@@ -975,16 +979,16 @@ body {
   width: 750px;
   float: left;
   text-align: center;
-  min-height: 500px;
+  min-height: 750px;
 }
 
 .sidebar {
   background-color: #94A0A3;
   float: right;
   width: 410px;
-  padding: 20px;
+  /*padding: 20px;*/
   color: whitesmoke;
-  min-height: 500px;
+  min-height: 750px;
 }
 
 .top-nav {
@@ -1054,4 +1058,37 @@ ul.navbar li form input:last-child {
   background-color: #542677;
   color: whitesmoke;
   font-size: 30px;
+}
+
+.enterinfo {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.profile {
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+#quote {
+  padding-top: 50px;
+  line-height:200%;
+  text-align: center;
+  font-family: 'Snippet', sans-serif;
+  font-size: 25px;
+}
+
+p.event a{
+  font-size: 25px;
+  text-decoration: none;
+}
+
+p.event a{
+  font-size: 25px;
+}
+
+p.event a:hover{
+  background-color: #215D6E;
+  color: whitesmoke;
+  padding: 2px;
 }

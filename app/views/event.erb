@@ -3,8 +3,9 @@
 
   <h2>Location: <%= @event.location %></h2>
   <p>Created by: <%= @creator.first_name %></p>
-  <p>Starts at: <%= @event.starts_at %></p>
-  <p>Ends at: <%= @event.ends_at %></p>
+  <p>Starts at: <%= display_start_time(@event)%></p>
+  <p>Ends at: <%= display_end_time(@event) %></p>
+  <p>Description: <%= @event.description %></p>
   <ul>Attendees: 
     <% @attendances.each do |attendance| %>
       <li><%= attendance.user.first_name %></li>

@@ -2,8 +2,9 @@
   <h1><%= @event.name %></h1>
 
   <h2>Location: <%= @event.location %></h2>
-  <p>Starts at: <%= @event.starts_at %></p>
-  <p>Ends at: <%= @event.ends_at %></p>
+  <p>Starts at: <%= display_start_time(@event) %></p>
+  <p>Ends at: <%= display_end_time(@event) %></p>
+  <p>Description: <%= @event.description %></p>
   <ul>Attendees: </ul>
   
   <h2>Edit this event</h2>

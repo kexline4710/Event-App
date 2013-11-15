@@ -5,8 +5,10 @@ $(document).ready(function() {
     $.post('/events', data, function(response){
       console.log(response)
       var JSONObject = response
-      var eventHTML = "<p><a href='/events/" + JSONObject.id +  "'>" + JSONObject.name + "</a></p>"
+      var eventHTML = "<p class='event'><a href='/events/" + JSONObject.id +  "'>" + JSONObject.name + "</a></p>"
       $("#events_created").append(eventHTML)
+      $("#event-list").append(eventHTML)
+      $('#profile_event input').attr('value','')
     })
   });
 })
