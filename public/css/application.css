@@ -125,7 +125,7 @@ Forms Core
 }
 
 /* Define consistent border, margin, and padding.*/
- 
+
 
 .pure-skin-mine .pure-form fieldset {
     border: 1px solid #c0c0c0;
@@ -284,7 +284,7 @@ Forms Core
         margin-bottom: 0.3em;
         display: block;
     }
-    
+
     .pure-skin-mine .pure-group input[type="text"],
     .pure-skin-mine .pure-group input[type="password"],
     .pure-skin-mine .pure-group input[type="email"],
@@ -492,7 +492,7 @@ Forms Core
 .pure-skin-mine .pure-form-aligned textarea,
 .pure-skin-mine .pure-form-aligned select,
 /* note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
-.pure-skin-mine .pure-form-aligned .pure-help-inline, 
+.pure-skin-mine .pure-form-aligned .pure-help-inline,
 .pure-skin-mine .pure-form-message-inline {
     display: inline-block;
     *display: inline; /* IE7 inline-block hack */
@@ -566,7 +566,7 @@ Forms Core
 }
 
 /* Inline help for forms */
-/* Note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */ 
+/* Note: pure-help-inline is deprecated. Use .pure-form-message-inline instead */
 .pure-skin-mine .pure-form .pure-help-inline,
 .pure-skin-mine .pure-form-message-inline {
     display: inline-block;
@@ -664,7 +664,7 @@ striping:
 
 /* from PURE menu-core.css */
 /*csslint adjoining-classes:false, outline-none:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/ 
+/*TODO: Remove this lint rule override after a refactor of this code.*/
 
 .pure-skin-mine .pure-menu ul {
     position: absolute;
@@ -804,7 +804,7 @@ margin: 7px 2px;
 /* end from yuicss/menu-core.css *******************************************/
 /* from yuicss menu-paginator.css */
 /*csslint box-model:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/ 
+/*TODO: Remove this lint rule override after a refactor of this code.*/
 
 .pure-skin-mine .pure-paginator {
 
@@ -858,7 +858,7 @@ margin: 7px 2px;
 /* from PURE menu.css *******************************************/
 /* MAIN MENU STYLING */
 /*csslint adjoining-classes:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/ 
+/*TODO: Remove this lint rule override after a refactor of this code.*/
 
 .pure-skin-mine .pure-menu.pure-menu-open,
 .pure-skin-mine .pure-menu.pure-menu-horizontal li .pure-menu-children {
@@ -1004,7 +1004,7 @@ body {
   font-family: 'Snippet', sans-serif;
   color: whitesmoke;
   font-size: 70px;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 
 /*NAVBAR*/
@@ -1077,6 +1077,7 @@ ul.navbar li form input:last-child {
   padding-left: 40px;
   padding-bottom: 40px;
   float: left;
+  width: 550px;
 }
 
 #quote {
