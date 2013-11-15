@@ -1060,6 +1060,14 @@ ul.navbar li form input:last-child {
   font-size: 30px;
 }
 
+.submit_button {
+  background-color: #542677;
+  color: whitesmoke;
+  font-size: 20px;
+  float: left;
+  margin-right: 15px;
+}
+
 .enterinfo {
   padding-left: 40px;
   padding-bottom: 40px;
@@ -1068,6 +1076,7 @@ ul.navbar li form input:last-child {
 .profile {
   padding-left: 40px;
   padding-bottom: 40px;
+  float: left;
 }
 
 #quote {
@@ -1091,4 +1100,12 @@ p.event a:hover{
   background-color: #215D6E;
   color: whitesmoke;
   padding: 2px;
+}
+
+#map_canvas {
+    width: 500px;
+    height: 400px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
 }

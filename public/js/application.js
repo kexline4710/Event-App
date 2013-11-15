@@ -11,4 +11,6 @@ $(document).ready(function() {
       $('#profile_event input').attr('value','')
     })
   });
+
+  var autocomplete = new google.maps.places.Autocomplete($(".autocomplete-location").get(0));
 })

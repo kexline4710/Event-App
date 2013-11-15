@@ -33,4 +33,9 @@ class User < ActiveRecord::Base
     self.event_attendances.map {|attendance| attendance.event}
   end
 
+  def gravatar_url
+    hash = Digest::MD5.hexdigest(self.email.downcase)
+    "http://www.gravatar.com/avatar/#{hash}"
+  end
+
 end

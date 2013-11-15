@@ -1,4 +1,4 @@
-<div class="container">
+<div class="profile">
   <h1><%= @event.name %></h1>
 
   <h2>Location: <%= @event.location %></h2>
@@ -6,27 +6,27 @@
   <p>Starts at: <%= display_start_time(@event)%></p>
   <p>Ends at: <%= display_end_time(@event) %></p>
   <p>Description: <%= @event.description %></p>
-  <ul>Attendees: 
+  <p>Attendees: <br>
     <% @attendances.each do |attendance| %>
-      <li><%= attendance.user.first_name %></li>
+      <img src="<%= attendance.user.gravatar_url %>"/>
     <% end %>
-  </ul>
+  </p>
 
 
   <form action="/events/<%= @event.id %>/eventattendances" method="POST">
-      <input type="submit" value="Attend Event">
+      <button class="submit_button" type="submit">Attend Event</button>
   </form>
 
   <% if user_logged_in?%>
   <% if @creator.id == current_user.id %>
     <form action="/events/<%= @event.id %>/edit">
-      <input type="submit" value="Edit Event">
+      <button class="submit_button" type="submit">Edit Event</button>
     </form>
     <form action="/events/<%= @event.id %>/delete" method="POST">
-      <input type="submit" value="Delete Event">
+      <button class="submit_button" type="submit">Delete Event</button>
     </form>
 
   <% end %>
   <% end %>
-
 </div>
+<div id="map_canvas"></div>

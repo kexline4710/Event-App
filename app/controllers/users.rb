@@ -33,8 +33,7 @@ get '/profile' do
     @user = User.find(session[:user_id])
     @created = @user.created_events
     @attended = @user.attended_events
-    hash = Digest::MD5.hexdigest(@user.email.downcase)
-    @image = "http://www.gravatar.com/avatar/#{hash}"
+    @image = @user.gravatar_url
   end
   erb :profile
 end
